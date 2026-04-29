@@ -1,1 +1,1395 @@
 
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>omakase 墨 | Authentic Wagyu · Halal · Shinjuku Tokyo</title>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TG6DJRLV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17988602222"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17988602222');
+</script>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Epilogue:wght@300;400;600&family=Josefin+Sans:wght@300;400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+'ginza-gold': '#c9a96e',
+'ginza-black': '#090909',
+'ginza-ivory': '#f0ede4',
+'halal-green': '#0d1f10',
+},
+fontFamily: {
+'epilogue': ['Epilogue', 'sans-serif'],
+'cormorant': ['Cormorant Garamond', 'serif'],
+'josefin': ['Josefin Sans', 'sans-serif'],
+},
+animation: { 'ken-burns': 'kenburns 20s ease-in-out infinite alternate' },
+keyframes: {
+kenburns: { '0%': { transform:'scale(1)' }, '100%': { transform:'scale(1.15)' } }
+}
+}
+}
+}
+</script>
+
+<style>
+body { padding-bottom: 72px; }
+.reveal { opacity:0; transform:translateY(30px); transition:all 0.8s ease-out; }
+.reveal.active { opacity:1; transform:translateY(0); }
+.dark-overlay { background:linear-gradient(to bottom,rgba(9,9,9,0.15) 0%,rgba(9,9,9,0.90) 100%); }
+
+.nav-link { position:relative; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(240,237,228,0.6); transition:color 0.3s; }
+.nav-link::after { content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:#c9a96e; transition:width 0.3s; }
+.nav-link:hover { color:#c9a96e; }
+.nav-link:hover::after { width:100%; }
+.header-divider { width:1px; height:14px; background:rgba(201,169,110,0.3); }
+
+.sticky-cta { position:fixed; bottom:0; left:0; right:0; z-index:100; background:rgba(9,9,9,0.93); backdrop-filter:blur(12px); border-top:1px solid rgba(201,169,110,0.25); padding:12px 20px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.sticky-cta-text { font-size:11px; color:rgba(240,237,228,0.55); letter-spacing:0.05em; line-height:1.4; }
+.sticky-cta-text strong { display:block; color:rgba(201,169,110,0.9); font-weight:600; font-size:12px; letter-spacing:0.08em; }
+.sticky-cta-btn { flex-shrink:0; background:#c9a96e; color:#090909; font-family:'Josefin Sans',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; padding:12px 20px; border-radius:8px; white-space:nowrap; transition:transform 0.2s,opacity 0.2s; border:none; cursor:pointer; }
+.sticky-cta-btn:hover { transform:scale(1.04); opacity:0.92; }
+
+.halal-cert-badge { display:inline-flex; flex-direction:column; align-items:center; gap:6px; border:1.5px solid #c9a96e; border-radius:50%; width:88px; height:88px; justify-content:center; position:relative; background:radial-gradient(circle at center,rgba(201,169,110,0.08) 0%,transparent 70%); }
+.halal-cert-badge::before { content:''; position:absolute; inset:4px; border-radius:50%; border:0.5px dashed rgba(201,169,110,0.4); }
+.halal-cert-badge-wrap { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:2rem; }
+
+.map-wrapper { position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; border:1px solid rgba(201,169,110,0.2); }
+.map-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; filter:grayscale(30%) contrast(1.05); }
+
+.jp-text { font-family: 'Noto Serif JP', serif; font-weight: 300; letter-spacing: 0.15em; }
+
+.year-badge { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:3.5rem; color:rgba(201,169,110,0.2); line-height:1; }
+.section-label { font-size:10px; letter-spacing:0.3em; color:rgba(201,169,110,0.6); text-transform:uppercase; }
+
+.slide { transition: opacity 1.2s ease-in-out; }
+
+.course-scroll { display:flex; gap:16px; overflow-x:auto; padding:8px 0 16px; -ms-overflow-style:none; scrollbar-width:none; }
+.course-scroll::-webkit-scrollbar { display:none; }
+.course-card { flex-shrink:0; width:260px; border-radius:16px; overflow:hidden; }
+@media (min-width:768px) {
+  .course-scroll { display:grid; grid-template-columns:repeat(3,1fr); overflow-x:visible; }
+  .course-card { width:auto; }
+}
+.course-detail-panel { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+.course-detail-panel.open { max-height:600px; }
+.chevron-icon { transition:transform 0.3s; }
+.chevron-icon.open { transform:rotate(180deg); }
+
+/* Booking count banner */
+.booking-pulse {
+  display:inline-block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#ef4444;
+  margin-right:8px;
+  animation: pulseRed 1.8s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+}
+@keyframes pulseRed {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Confirmation dialog styles */
+.confirm-checkbox {
+  appearance:none;
+  -webkit-appearance:none;
+  width:18px;
+  height:18px;
+  border:1.5px solid rgba(201,169,110,0.5);
+  border-radius:4px;
+  background:#1a1a1a;
+  cursor:pointer;
+  position:relative;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.confirm-checkbox:checked {
+  background:#c9a96e;
+  border-color:#c9a96e;
+}
+.confirm-checkbox:checked::after {
+  content:'';
+  position:absolute;
+  left:5px;
+  top:1px;
+  width:5px;
+  height:10px;
+  border:solid #090909;
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+
+/* Review cards */
+.review-scroll {
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  padding:8px 0 16px;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+  scroll-snap-type:x mandatory;
+}
+.review-scroll::-webkit-scrollbar { display:none; }
+.review-card {
+  flex-shrink:0;
+  width:300px;
+  padding:24px;
+  border-radius:16px;
+  border:1px solid rgba(201,169,110,0.2);
+  background:linear-gradient(135deg, rgba(201,169,110,0.06) 0%, rgba(201,169,110,0.02) 100%);
+  scroll-snap-align:start;
+}
+@media (min-width:768px) {
+  .review-scroll {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    overflow-x:visible;
+  }
+  .review-card { width:auto; }
+}
+@media (min-width:1024px) {
+  .review-scroll {
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+/* Success screen: gold foil + ink brush animation */
+.success-stage {
+  position:relative;
+  padding:40px 0 32px;
+  text-align:center;
+  overflow:hidden;
+}
+.gold-foil-bg {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:0.6;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(201,169,110,0.25) 0%, transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(201,169,110,0.18) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(201,169,110,0.12) 0%, transparent 50%);
+  animation: foilShimmer 4s ease-in-out infinite;
+}
+@keyframes foilShimmer {
+  0%, 100% { opacity:0.4; transform:scale(1); }
+  50% { opacity:0.7; transform:scale(1.05); }
+}
+.gold-particle {
+  position:absolute;
+  width:4px;
+  height:4px;
+  background:#c9a96e;
+  border-radius:50%;
+  opacity:0;
+  animation: particleFloat 3s ease-out infinite;
+  box-shadow:0 0 6px rgba(201,169,110,0.9), 0 0 12px rgba(201,169,110,0.5);
+}
+@keyframes particleFloat {
+  0% { opacity:0; transform:translate(0, 0) scale(0); }
+  20% { opacity:1; transform:translate(var(--dx, 20px), -10px) scale(1); }
+  80% { opacity:0.6; transform:translate(calc(var(--dx, 20px) * 2), -40px) scale(0.7); }
+  100% { opacity:0; transform:translate(calc(var(--dx, 20px) * 3), -80px) scale(0); }
+}
+.sumi-brush-svg {
+  position:relative;
+  z-index:2;
+  width:110px;
+  height:110px;
+  margin:0 auto 20px;
+}
+.sumi-brush-svg path {
+  fill:none;
+  stroke:#c9a96e;
+  stroke-width:5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:600;
+  stroke-dashoffset:600;
+  filter:drop-shadow(0 0 8px rgba(201,169,110,0.7));
+}
+.sumi-brush-svg.drawing path {
+  animation: drawSumi 1.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes drawSumi {
+  0% { stroke-dashoffset:600; }
+  100% { stroke-dashoffset:0; }
+}
+.success-title {
+  position:relative;
+  z-index:2;
+  opacity:0;
+  animation: fadeRise 0.8s ease-out 1.2s forwards;
+}
+.success-body {
+  position:relative;
+  z-index:2;
+  opacity:0;
+  animation: fadeRise 0.8s ease-out 1.6s forwards;
+}
+.success-close {
+  position:relative;
+  z-index:2;
+  opacity:0;
+  animation: fadeRise 0.8s ease-out 2.0s forwards;
+}
+@keyframes fadeRise {
+  0% { opacity:0; transform:translateY(10px); }
+  100% { opacity:1; transform:translateY(0); }
+}
+</style>
+</head>
+
+<body class="bg-ginza-black text-ginza-ivory font-epilogue overflow-x-hidden">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG6DJRLV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta-text">
+    <strong>Reservations</strong>
+    Recommended 2 weeks in advance
+  </div>
+  <button
+    onclick="openReserveModal('sticky_cta')"
+    class="sticky-cta-btn"
+    data-gtm-label="sticky_cta">
+    RESERVE →
+  </button>
+</div>
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 bg-ginza-black/80 backdrop-blur-md border-b border-ginza-gold/20">
+<div class="hidden sm:flex items-center justify-center gap-6 py-1.5 border-b border-ginza-gold/10 text-[9px] tracking-[0.25em] text-ginza-gold/60 uppercase">
+<span>Shinjuku · Tokyo</span>
+<span class="header-divider"></span>
+<span>Open 11:00 — 23:00</span>
+<span class="header-divider"></span>
+<span>Halal Certified</span>
+</div>
+<nav class="flex items-center justify-between px-6 py-3 max-w-[390px] mx-auto">
+<div class="flex flex-col leading-none">
+<span class="text-[9px] tracking-[0.35em] text-ginza-gold/60 uppercase mb-0.5 jp-text">omakase</span>
+<span class="text-xl text-ginza-gold tracking-wide jp-text">墨</span>
+</div>
+<div class="hidden xs:flex items-center gap-4">
+<a class="nav-link" href="#story">Story</a>
+<span class="header-divider"></span>
+<a class="nav-link" href="#access">Access</a>
+</div>
+  <button
+    onclick="openReserveModal('header')"
+    class="bg-ginza-gold text-ginza-black px-4 py-2 rounded-lg text-[10px] font-josefin font-semibold tracking-widest hover:bg-opacity-90 hover:scale-105 transition-all"
+    data-gtm-label="header">
+    RESERVE
+  </button>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="relative h-screen w-full flex flex-col justify-end items-center overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<div id="slideshow" class="absolute inset-0">
+<img class="slide absolute inset-0 w-full h-full object-cover" src="images/hero.jpg" alt="Omakase Full Course"/>
+<img class="slide absolute inset-0 w-full h-full object-cover opacity-0" src="images/sushi.jpg" alt="Omakase Sushi"/>
+<img class="slide absolute inset-0 w-full h-full object-cover opacity-0" src="images/wagyu.jpg" alt="A5 Wagyu"/>
+<img class="slide absolute inset-0 w-full h-full object-cover opacity-0" src="images/Seasonal_menu.jpg" alt="Seasonal Menu"/>
+<img class="slide absolute inset-0 w-full h-full object-cover opacity-0" src="images/Japanese_sweets.jpg" alt="Japanese Sweets"/>
+</div>
+<div class="absolute inset-0 dark-overlay"></div>
+</div>
+
+<div class="relative z-10 w-full px-8 pb-28 text-center">
+<span class="inline-block border border-ginza-gold/50 px-3 py-1 mb-6 text-[10px] tracking-[0.3em] text-ginza-gold uppercase jp-text">新宿 · SHINJUKU · TOKYO</span>
+<h1 class="font-cormorant italic text-4xl md:text-5xl mb-3 leading-tight">
+Tokyo Omakase Sushi Wagyu (Halal) Shinjuku Restaurant<br/><span class="text-2xl md:text-3xl">新宿寿司和牛餐厅</span>
+</h1>
+<p class="text-sm text-ginza-gold/60 tracking-widest mb-5 jp-text">おまかせコース · 和牛体験</p>
+<p class="text-sm font-light text-ginza-ivory/70 mb-8 max-w-xs mx-auto leading-relaxed">
+Ultra-rare lean Wagyu. Halal certified.<br/>A dining experience crafted for the world.
+</p>
+
+<div class="flex flex-col items-center gap-3 w-full max-w-xs mx-auto">
+  <button
+    onclick="openReserveModal('hero')"
+    class="w-full bg-ginza-gold text-ginza-black font-josefin font-semibold rounded-lg tracking-widest text-sm hover:scale-105 transition-transform shadow-[0_0_24px_rgba(201,169,110,0.3)] flex overflow-hidden"
+    data-gtm-label="hero">
+    <span class="flex-1 py-4 px-4 text-center">RESERVE YOUR SEAT</span>
+    <span class="bg-black/15 px-4 flex items-center justify-center">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+
+  <a
+    class="w-full text-center text-ginza-gold font-josefin text-xs tracking-widest py-3 rounded-lg border border-ginza-gold/40 hover:border-ginza-gold/80 transition-colors flex items-center justify-center gap-2"
+    href="#access"
+    data-gtm-label="hero_map">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+      <path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#c9a96e" stroke-width="1.5"/>
+      <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" stroke="#c9a96e" stroke-width="1.5"/>
+    </svg>
+    ACCESS &amp; MAP
+  </a>
+
+  <!-- BOOKING COUNT BANNER -->
+  <div class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-ginza-gold/10 via-ginza-gold/20 to-ginza-gold/10 border border-ginza-gold/40 rounded-full px-4 py-2.5 mt-1">
+    <span class="booking-pulse"></span>
+    <span class="text-[11px] font-josefin font-semibold tracking-[0.1em] text-ginza-gold uppercase">
+      <span class="text-ginza-ivory">76 bookings</span> in the last 24 hours
+    </span>
+  </div>
+
+  <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+    <svg class="w-4 h-4 text-ginza-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+    <span class="text-[10px] font-josefin tracking-widest uppercase">Halal Certified · Alcohol Free</span>
+  </div>
+</div>
+</div>
+</section>
+
+<script>
+(function() {
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+setInterval(() => {
+slides[current].style.opacity = '0';
+current = (current + 1) % slides.length;
+slides[current].style.opacity = '1';
+}, 4000);
+})();
+</script>
+
+<!-- SOCIAL PROOF -->
+<section class="py-8 bg-ginza-black">
+<div class="flex flex-wrap justify-center gap-4 px-4">
+
+<div class="trip-card w-full max-w-[340px] border border-ginza-gold/30 rounded-lg bg-ginza-gold/5 text-center flex flex-col items-center gap-0 overflow-hidden">
+<img src="images/trippage.jpg" alt="Tripadvisor Ranking" class="w-1/2 h-auto mx-auto mt-3 rounded opacity-90"/>
+<div class="flex flex-col items-center gap-1.5 p-3 border-t border-ginza-gold/10 w-full mt-2">
+<img src="images/tripicon.jpg" alt="Tripadvisor" class="w-8 h-8 object-contain rounded-full p-0.5" style="background:#34e0a1;"/>
+<p class="text-[10px] uppercase tracking-widest text-ginza-gold">Trip Advisor</p>
+<p class="font-cormorant text-base italic leading-tight">Tokyo 2026 · No.1 Ranked</p>
+<p class="text-[8px] text-ginza-ivory/40 leading-relaxed px-2 mt-1">
+* This No.1 refers to our Flagship (main) store, not this location.<br/>
+It ranked No.1 on Tripadvisor's Tokyo ranking from August 2025 to March 2026.
+</p>
+</div>
+</div>
+
+<div class="w-40 border border-ginza-gold/30 p-4 rounded-lg bg-ginza-gold/5 text-center flex flex-col items-center gap-2">
+<svg class="w-8 h-8" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+<path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+<path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+<path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+</svg>
+<p class="text-[10px] uppercase tracking-widest text-ginza-gold">Google Reviews</p>
+<p class="font-cormorant text-lg italic leading-tight">4.8 ★<br/>500+ Reviews</p>
+<p class="text-[9px] text-ginza-ivory/50 leading-relaxed">Highly rated by guests from around the world.</p>
+</div>
+
+<div class="w-40 border border-ginza-gold/30 p-4 rounded-lg bg-ginza-gold/5 text-center flex flex-col items-center gap-2">
+<svg class="w-10 h-10" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="23" fill="#1a6b35" opacity="0.9"/>
+<path d="M24 10a14 14 0 1 0 0 28 10.5 10.5 0 1 1 0-21A14 14 0 0 0 24 10z" fill="white"/>
+<polygon points="33,9 34.5,13.5 39,13.5 35.3,16.2 36.8,20.7 33,18 29.2,20.7 30.7,16.2 27,13.5 31.5,13.5" fill="white"/>
+</svg>
+<p class="text-[10px] uppercase tracking-widest text-ginza-gold">Halal Certified</p>
+<p class="font-cormorant text-lg italic leading-tight">Japan Muslim<br/>Association</p>
+<p class="text-[9px] text-ginza-ivory/50 leading-relaxed">Certified Halal. No pork, no alcohol. Prayer room on-site.</p>
+</div>
+
+</div>
+</section>
+
+<!-- MENU -->
+<section class="reveal py-16 bg-ginza-black" id="menu">
+<div class="text-center mb-10 px-6">
+<p class="section-label mb-4">Menu · Mastery</p>
+<h3 class="font-cormorant italic text-3xl mb-4 leading-snug">"Where Theatre Meets Taste"</h3>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70 max-w-lg mx-auto">
+From the delicate assembly of Edomae-style sushi to the dramatic carving of A5 Wagyu, every course is a choreographed masterpiece performed live before your eyes.
+</p>
+</div>
+<div class="flex mb-10">
+<div class="relative flex-1 h-52 overflow-hidden group">
+<img alt="Omakase Sushi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/sushi.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-ginza-black/70"></div>
+<div class="absolute bottom-0 right-0 p-4 text-right">
+<p class="text-[9px] tracking-widest uppercase text-ginza-gold mb-0.5">The Craft</p>
+<p class="font-cormorant italic text-lg">Omakase Sushi</p>
+</div>
+</div>
+<div class="relative flex-1 h-52 overflow-hidden group">
+<img alt="A5 Wagyu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/wagyu.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-l from-transparent to-ginza-black/70"></div>
+<div class="absolute bottom-0 left-0 p-4">
+<p class="text-[9px] tracking-widest uppercase text-ginza-gold mb-0.5">The Ritual</p>
+<p class="font-cormorant italic text-lg">A5 Wagyu</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- OUR STORY -->
+<section class="reveal py-20 bg-ginza-black border-t border-ginza-gold/10" id="story">
+<div class="max-w-3xl mx-auto px-8">
+<div class="text-center mb-12">
+<p class="section-label mb-4">Our Story</p>
+<h3 class="font-cormorant italic text-3xl leading-snug">The Story Begins in 1962</h3>
+</div>
+<div class="flex items-start gap-4 mb-10">
+<div class="flex-shrink-0 text-center">
+<div class="year-badge">1962</div>
+<div class="w-px h-16 bg-ginza-gold/20 mx-auto mt-2"></div>
+</div>
+<div class="pt-3">
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70">
+The first generation started this journey as a Wagyu merchant. A craftsman who faced cattle, discerned the quality of meat, and honed his skills. Since then, the family business expanded to meat wholesale, butcher shops, and the food industry. I was raised alongside meat as the fifth generation.
+</p>
+</div>
+</div>
+<div class="relative mb-10 pl-6 border-l border-ginza-gold/30">
+<p class="font-cormorant italic text-xl leading-relaxed text-ginza-ivory/90 mb-3">
+"Wagyu was never a 'special occasion treat' for me. I have known its taste since I was a child and it was always close to me."
+</p>
+<p class="text-[10px] font-josefin tracking-widest text-ginza-gold/60 uppercase">— 5th Generation Owner</p>
+</div>
+<div class="mb-8">
+<p class="section-label mb-3">The Turning Point</p>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70 mb-4">
+However, in my 30s, when I visited America, that feeling was greatly shaken. The "WAGYU" I encountered there was completely different from the Wagyu I knew. Cattle from Australia and America were circulated as "Wagyu," and many people smiled as they ate, saying, "Is this Wagyu?"
+</p>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70">
+Seeing that scene brought me both surprise and frustration. As the fifth generation, I decided to deliver the "real Wagyu" to the world once again — and opened this restaurant in the heart of Tokyo.
+</p>
+</div>
+<div class="bg-ginza-gold/5 border border-ginza-gold/15 rounded-2xl p-6 mb-8">
+<p class="section-label mb-3">Our Commitment to Quality</p>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70">
+I visit livestock farms all over Japan and purchase only Wagyu that I truly accept by the whole head. Not the industrially fattened Wagyu with excessive fat — rather, Wagyu raised healthily with <span class="text-ginza-gold/90">umami and tenderness in the meat itself, not just in the fat.</span> This philosophy carries through every dish we serve.
+</p>
+</div>
+<div class="mb-4">
+<p class="section-label mb-3">For Everyone in the World</p>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70">
+I personally select Wagyu processed at halal-certified slaughterhouses in Japan. This restaurant was born to share authentic Japanese food culture with everyone — regardless of nationality, religion, age, or gender.
+</p>
+</div>
+</div>
+</section>
+
+<div class="relative h-48 overflow-hidden">
+<img src="images/hero.jpg" alt="" class="w-full h-full object-cover object-center"/>
+<div class="absolute inset-0" style="background:linear-gradient(to bottom, #090909 0%, transparent 30%, transparent 70%, #090909 100%);"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<p class="font-cormorant italic text-2xl text-ginza-ivory/80 tracking-widest">— Course Selection —</p>
+</div>
+</div>
+
+<!-- COURSE SELECTION -->
+<section class="reveal py-16 bg-ginza-black" id="courses">
+<div class="px-6 max-w-3xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+<div class="rounded-xl p-4 text-center" style="background:linear-gradient(135deg,rgba(201,169,110,0.15) 0%,rgba(201,169,110,0.05) 100%); border:1px solid rgba(201,169,110,0.35);">
+<p class="font-cormorant italic text-2xl text-ginza-gold mb-1">Only 5%</p>
+<p class="text-[10px] tracking-widest uppercase text-ginza-ivory/60">of the market</p>
+<p class="text-[10px] text-ginza-ivory/40 mt-1">Ultra-rare lean Wagyu</p>
+</div>
+<div class="rounded-xl p-4 text-center" style="background:linear-gradient(135deg,rgba(201,169,110,0.15) 0%,rgba(201,169,110,0.05) 100%); border:1px solid rgba(201,169,110,0.35);">
+<p class="font-cormorant italic text-2xl text-ginza-gold mb-1">Direct</p>
+<p class="text-[10px] tracking-widest uppercase text-ginza-ivory/60">from the farm</p>
+<p class="text-[10px] text-ginza-ivory/40 mt-1">Whole-head purchase</p>
+</div>
+<div class="rounded-xl p-4 text-center" style="background:linear-gradient(135deg,rgba(201,169,110,0.15) 0%,rgba(201,169,110,0.05) 100%); border:1px solid rgba(201,169,110,0.35);">
+<p class="font-cormorant italic text-2xl text-ginza-gold mb-1">Low Temp</p>
+<p class="text-[10px] tracking-widest uppercase text-ginza-ivory/60">slow-cooked</p>
+<p class="text-[10px] text-ginza-ivory/40 mt-1">Deep umami unlocked</p>
+</div>
+<div class="rounded-xl p-4 text-center" style="background:linear-gradient(135deg,rgba(201,169,110,0.15) 0%,rgba(201,169,110,0.05) 100%); border:1px solid rgba(201,169,110,0.35);">
+<p class="font-cormorant italic text-2xl text-ginza-gold mb-1">100%</p>
+<p class="text-[10px] tracking-widest uppercase text-ginza-ivory/60">Halal certified</p>
+<p class="text-[10px] text-ginza-ivory/40 mt-1">Alcohol-free menu</p>
+</div>
+</div>
+
+<div class="text-center mb-4">
+<p class="section-label mb-2">Course Selection</p>
+<p class="text-xs text-ginza-ivory/40 font-josefin tracking-widest">Tap a course to see full details</p>
+</div>
+
+<div class="course-scroll" id="courseScroll">
+<div class="course-card border border-ginza-gold/20 bg-ginza-gold/5">
+<div class="p-5">
+<p class="text-[9px] section-label mb-1">Entry Course</p>
+<p class="font-cormorant italic text-xl mb-3">SUMI — 墨 —</p>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-ginza-gold font-josefin font-bold">¥39,800</span>
+<span class="text-ginza-ivory/35 text-[9px]">(¥43,780 inc.tax)</span>
+</div>
+<p class="text-[10px] text-ginza-ivory/45 font-josefin mb-4">13 courses · 60–75 min</p>
+<button onclick="toggleCourse('sumi')" class="w-full text-[10px] font-josefin tracking-widest border border-ginza-gold/30 text-ginza-gold/70 py-2 rounded-lg flex items-center justify-center gap-1">
+SEE DETAILS <svg class="chevron-icon w-3 h-3" id="chevron-sumi" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+</button>
+<div class="course-detail-panel" id="detail-sumi">
+<div class="border-t border-ginza-gold/10 space-y-2 pt-3 mt-3">
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">序</span><span class="text-ginza-ivory/60">Handmade Tofu · Seafood Yukhoe &amp; Hyogo Nori</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">八寸</span><span class="text-ginza-ivory/60">Seasonal Appetizer — Abalone / Shrimp &amp; Ginkgo / Squid / Namasu / Date-maki / Lotus Root</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">温物</span><span class="text-ginza-ivory/60">Wagyu Shabu-shabu &amp; Dashi</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">鮨</span><span class="text-ginza-ivory/60">Temaki: Salmon &amp; Ikura / Maguro · Pressed Sushi 6 kinds · Wagyu Tenderloin Nigiri × Akazu</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">椀</span><span class="text-ginza-ivory/60">Aka-dashi Miso — Lake Shinji Clams</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="course-card border-2 border-ginza-gold relative" style="box-shadow:0 0 24px rgba(201,169,110,0.18);">
+<div class="absolute top-3 right-3 bg-ginza-gold text-ginza-black text-[9px] font-josefin font-bold tracking-widest px-2.5 py-1 rounded-full z-10">MOST POPULAR</div>
+<div class="p-5 bg-ginza-gold/5">
+<p class="text-[9px] section-label mb-1">Premium Course</p>
+<p class="font-cormorant italic text-xl mb-3">BOKUGA — 墨雅 —</p>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-ginza-gold font-josefin font-bold">¥49,800</span>
+<span class="text-ginza-ivory/35 text-[9px]">(¥54,780 inc.tax)</span>
+</div>
+<p class="text-[10px] text-ginza-ivory/45 font-josefin mb-4">15 courses · 75–90 min</p>
+<button onclick="toggleCourse('bokuga')" class="w-full text-[10px] font-josefin tracking-widest border border-ginza-gold/50 text-ginza-gold py-2 rounded-lg flex items-center justify-center gap-1">
+SEE DETAILS <svg class="chevron-icon w-3 h-3" id="chevron-bokuga" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+</button>
+<div class="course-detail-panel" id="detail-bokuga">
+<div class="border-t border-ginza-gold/10 space-y-2 pt-3 mt-3">
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">序</span><span class="text-ginza-ivory/60">Handmade Tofu · Seafood Yukhoe &amp; Hyogo Nori</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">八寸</span><span class="text-ginza-ivory/60">Seasonal Appetizer Collection</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">温物</span><span class="text-ginza-ivory/60">Wagyu Shabu-shabu &amp; Dashi</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">逸品</span><span class="text-ginza-ivory/60">Wagyu &amp; Shiso Spring Roll · "Cheese Snow"</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">鮨</span><span class="text-ginza-ivory/60">Temaki · Pressed Sushi 6 kinds · Wagyu Nigiri</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">椀</span><span class="text-ginza-ivory/60">Aka-dashi Miso — Lake Shinji Clams</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">茶と甘味</span><span class="text-ginza-ivory/60">Matcha — Tsujiri · Wagashi 6 kinds</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="course-card border border-ginza-gold/20 bg-ginza-gold/5">
+<div class="p-5">
+<p class="text-[9px] section-label mb-1">Ultimate Course</p>
+<p class="font-cormorant italic text-xl mb-3">BOKUSHOU — 墨匠 —</p>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="text-ginza-gold font-josefin font-bold">¥89,800</span>
+<span class="text-ginza-ivory/35 text-[9px]">(¥98,780 inc.tax)</span>
+</div>
+<p class="text-[10px] text-ginza-ivory/45 font-josefin mb-4">20 courses · 120 min</p>
+<button onclick="toggleCourse('bokushou')" class="w-full text-[10px] font-josefin tracking-widest border border-ginza-gold/30 text-ginza-gold/70 py-2 rounded-lg flex items-center justify-center gap-1">
+SEE DETAILS <svg class="chevron-icon w-3 h-3" id="chevron-bokushou" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+</button>
+<div class="course-detail-panel" id="detail-bokushou">
+<div class="border-t border-ginza-gold/10 space-y-2 pt-3 mt-3">
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">序</span><span class="text-ginza-ivory/60">Handmade Tofu · Seafood Yukhoe &amp; Hyogo Nori</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">八寸</span><span class="text-ginza-ivory/60">Seasonal Appetizer Collection</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">温物</span><span class="text-ginza-ivory/60">Wagyu Shabu-shabu &amp; Dashi</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">鮨</span><span class="text-ginza-ivory/60">Temaki: Uni · Salmon &amp; Ikura · Pressed Sushi 6 kinds · Wagyu Nigiri</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">逸品</span><span class="text-ginza-ivory/60">Jet-Black Vichyssoise · Wagyu &amp; Shiso Spring Roll · "Cheese Snow"</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">和牛</span><span class="text-ginza-ivory/60">Wagyu Steak "Tanto" · Mini Burger · "Ultimate One Bite"</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">お口直し</span><span class="text-ginza-ivory/60">Yuzu Sorbet with Gold Leaf</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">椀</span><span class="text-ginza-ivory/60">Aka-dashi Miso — Lake Shinji Clams</span></div>
+<div class="flex gap-2 text-[10px]"><span class="text-ginza-gold/50 w-12 flex-shrink-0">茶と甘味</span><span class="text-ginza-ivory/60">Matcha — Tsujiri · Wagashi 6 kinds</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p class="md:hidden text-center text-[9px] text-ginza-ivory/30 font-josefin tracking-widest mt-2 mb-8">← Swipe to see all courses →</p>
+
+<script>
+function toggleCourse(id) {
+  const panel = document.getElementById('detail-' + id);
+  const chevron = document.getElementById('chevron-' + id);
+  panel.classList.toggle('open');
+  chevron.classList.toggle('open');
+}
+window.addEventListener('load', function() {
+  if (window.innerWidth < 768) {
+    const scroll = document.getElementById('courseScroll');
+    const bokuga = scroll.children[1];
+    scroll.scrollLeft = bokuga.offsetLeft - (scroll.offsetWidth - bokuga.offsetWidth) / 2;
+  }
+});
+</script>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 mb-6">
+<div class="aspect-square relative rounded-lg overflow-hidden">
+<img alt="Seasonal Menu" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="images/Seasonal_menu.jpg"/>
+<div class="absolute bottom-2 left-2 text-[10px] tracking-widest uppercase text-white/70">Seasonal Menu</div>
+</div>
+<div class="aspect-square relative rounded-lg overflow-hidden">
+<img alt="Wagyu Experience" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="images/wagyu_experience.jpg"/>
+<div class="absolute bottom-2 left-2 text-[10px] tracking-widest uppercase text-white/70">Wagyu Experience</div>
+</div>
+<div class="aspect-square relative rounded-lg overflow-hidden">
+<img alt="Matcha Ceremony" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="images/matcha.jpg"/>
+<div class="absolute bottom-2 left-2 text-[10px] tracking-widest uppercase text-white/70">Matcha Ceremony</div>
+</div>
+<div class="aspect-square relative rounded-lg overflow-hidden">
+<img alt="Japanese Sweets" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="images/Japanese_sweets.jpg"/>
+<div class="absolute bottom-2 left-2 text-[10px] tracking-widest uppercase text-white/70">Japanese Sweets</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- REVIEWS / VOICES -->
+<section class="reveal py-20 bg-ginza-black border-t border-ginza-gold/10" id="reviews">
+<div class="max-w-3xl mx-auto px-6">
+  <div class="text-center mb-10">
+    <p class="section-label mb-4">Guest Voices</p>
+    <h3 class="font-cormorant italic text-3xl mb-3">From Around the World</h3>
+    <p class="text-sm font-light text-ginza-ivory/50 max-w-sm mx-auto leading-relaxed">
+      A selection of impressions shared by our guests.<br/>
+      <span class="text-ginza-ivory/30 text-[11px]">※ Sample voices · to be replaced with verified reviews</span>
+    </p>
+  </div>
+
+  <!-- Review scroll container -->
+  <div class="review-scroll" id="reviewScroll">
+
+    <!-- Review 1: English / UAE -->
+    <div class="review-card">
+      <div class="flex items-center gap-1 mb-3">
+        <span class="text-ginza-gold text-sm">★★★★★</span>
+        <span class="text-[10px] text-ginza-ivory/40 font-josefin tracking-wider ml-2">TRIPADVISOR</span>
+      </div>
+      <p class="font-cormorant italic text-base leading-relaxed text-ginza-ivory/85 mb-4">
+        "The prayer room made all the difference. Beautifully presented halal wagyu, thoughtfully served. My family from Dubai felt completely at home in Tokyo."
+      </p>
+      <div class="flex items-center gap-3 pt-3 border-t border-ginza-gold/10">
+        <div class="w-8 h-8 rounded-full bg-ginza-gold/20 border border-ginza-gold/30 flex items-center justify-center text-ginza-gold font-cormorant italic text-sm">A</div>
+        <div>
+          <p class="text-[11px] font-josefin tracking-wider text-ginza-ivory/70">Ahmed K.</p>
+          <p class="text-[9px] text-ginza-ivory/40 tracking-widest uppercase">Dubai · UAE</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 2: English / US -->
+    <div class="review-card">
+      <div class="flex items-center gap-1 mb-3">
+        <span class="text-ginza-gold text-sm">★★★★★</span>
+        <span class="text-[10px] text-ginza-ivory/40 font-josefin tracking-wider ml-2">GOOGLE</span>
+      </div>
+      <p class="font-cormorant italic text-base leading-relaxed text-ginza-ivory/85 mb-4">
+        "The BOKUGA course was theatrical — watching the chef carve the wagyu felt like a performance. The quality of the beef is on another level. Worth every yen."
+      </p>
+      <div class="flex items-center gap-3 pt-3 border-t border-ginza-gold/10">
+        <div class="w-8 h-8 rounded-full bg-ginza-gold/20 border border-ginza-gold/30 flex items-center justify-center text-ginza-gold font-cormorant italic text-sm">J</div>
+        <div>
+          <p class="text-[11px] font-josefin tracking-wider text-ginza-ivory/70">Jennifer M.</p>
+          <p class="text-[9px] text-ginza-ivory/40 tracking-widest uppercase">New York · USA</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 3: Japanese -->
+    <div class="review-card">
+      <div class="flex items-center gap-1 mb-3">
+        <span class="text-ginza-gold text-sm">★★★★★</span>
+        <span class="text-[10px] text-ginza-ivory/40 font-josefin tracking-wider ml-2">GOOGLE</span>
+      </div>
+      <p class="font-cormorant italic text-base leading-relaxed text-ginza-ivory/85 mb-4">
+        「接待で利用しました。海外のお客様に和牛と寿司の両方を体験していただけて大変喜ばれました。静かな個室と丁寧な英語対応で安心してお任せできます。」
+      </p>
+      <div class="flex items-center gap-3 pt-3 border-t border-ginza-gold/10">
+        <div class="w-8 h-8 rounded-full bg-ginza-gold/20 border border-ginza-gold/30 flex items-center justify-center text-ginza-gold font-cormorant italic text-sm">T</div>
+        <div>
+          <p class="text-[11px] font-josefin tracking-wider text-ginza-ivory/70">田中 宏之 様</p>
+          <p class="text-[9px] text-ginza-ivory/40 tracking-widest uppercase">Tokyo · Japan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 4: Chinese (Traditional) -->
+    <div class="review-card">
+      <div class="flex items-center gap-1 mb-3">
+        <span class="text-ginza-gold text-sm">★★★★★</span>
+        <span class="text-[10px] text-ginza-ivory/40 font-josefin tracking-wider ml-2">TRIPADVISOR</span>
+      </div>
+      <p class="font-cormorant italic text-base leading-relaxed text-ginza-ivory/85 mb-4">
+        "真正的日本和牛體驗，完全不同於香港吃到的。低溫慢煮帶出的甘甜讓人難忘。師傅對每一片肉的態度就像對藝術品一樣。"
+      </p>
+      <div class="flex items-center gap-3 pt-3 border-t border-ginza-gold/10">
+        <div class="w-8 h-8 rounded-full bg-ginza-gold/20 border border-ginza-gold/30 flex items-center justify-center text-ginza-gold font-cormorant italic text-sm">L</div>
+        <div>
+          <p class="text-[11px] font-josefin tracking-wider text-ginza-ivory/70">Lin H.</p>
+          <p class="text-[9px] text-ginza-ivory/40 tracking-widest uppercase">Hong Kong</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review 5: English / Malaysia -->
+    <div class="review-card">
+      <div class="flex items-center gap-1 mb-3">
+        <span class="text-ginza-gold text-sm">★★★★★</span>
+        <span class="text-[10px] text-ginza-ivory/40 font-josefin tracking-wider ml-2">GOOGLE</span>
+      </div>
+      <p class="font-cormorant italic text-base leading-relaxed text-ginza-ivory/85 mb-4">
+        "As a Muslim food lover, finding authentic halal-certified omakase in Tokyo was a dream. The attention to every detail — from certification to the prayer space — showed real respect. The wagyu itself was sublime."
+      </p>
+      <div class="flex items-center gap-3 pt-3 border-t border-ginza-gold/10">
+        <div class="w-8 h-8 rounded-full bg-ginza-gold/20 border border-ginza-gold/30 flex items-center justify-center text-ginza-gold font-cormorant italic text-sm">F</div>
+        <div>
+          <p class="text-[11px] font-josefin tracking-wider text-ginza-ivory/70">Farah S.</p>
+          <p class="text-[9px] text-ginza-ivory/40 tracking-widest uppercase">Kuala Lumpur</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="md:hidden text-center text-[9px] text-ginza-ivory/30 font-josefin tracking-widest mt-2">← Swipe to read more →</p>
+
+  <!-- Aggregate rating summary -->
+  <div class="mt-10 flex flex-wrap justify-center items-center gap-6 pt-8 border-t border-ginza-gold/10">
+    <div class="text-center">
+      <p class="font-cormorant italic text-3xl text-ginza-gold leading-none mb-1">4.8</p>
+      <p class="text-ginza-gold text-sm mb-1">★★★★★</p>
+      <p class="text-[9px] text-ginza-ivory/40 font-josefin tracking-widest uppercase">Google · 500+ reviews</p>
+    </div>
+    <div class="w-px h-12 bg-ginza-gold/20"></div>
+    <div class="text-center">
+      <p class="font-cormorant italic text-3xl text-ginza-gold leading-none mb-1">No.1</p>
+      <p class="text-[9px] text-ginza-ivory/40 font-josefin tracking-widest uppercase mt-2">Tripadvisor Tokyo<br/>Aug 2025 — Mar 2026 (flagship)</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- RESERVATION CTA SECTION -->
+<section class="reveal py-20 px-6 text-center bg-ginza-black" id="reservation">
+<div class="max-w-[390px] mx-auto">
+<p class="section-label mb-4">Reserve</p>
+<h3 class="font-cormorant italic text-3xl mb-2">Begin Your Experience</h3>
+<p class="text-sm font-light text-ginza-ivory/50 mb-6 max-w-xs mx-auto">
+Reservations recommended 2 weeks in advance.<br/>Walk-ins welcome subject to availability.
+</p>
+
+  <!-- BOOKING COUNT BANNER (reservation section) -->
+  <div class="inline-flex items-center justify-center gap-2 bg-ginza-gold/10 border border-ginza-gold/40 rounded-full px-4 py-2 mb-8">
+    <span class="booking-pulse"></span>
+    <span class="text-[11px] font-josefin font-semibold tracking-[0.1em] text-ginza-gold uppercase">
+      <span class="text-ginza-ivory">76 bookings</span> in the last 24 hours
+    </span>
+  </div>
+
+  <div
+    onclick="openReserveModal('calendar_card')"
+    class="block border border-ginza-gold/30 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(201,169,110,0.08)] mb-4 hover:border-ginza-gold/60 transition-all duration-300 cursor-pointer group"
+    data-gtm-label="calendar_card">
+
+    <div class="bg-ginza-gold px-5 py-3 flex items-center justify-between">
+      <div class="text-left">
+        <p class="text-[9px] font-josefin tracking-widest text-ginza-black/60 uppercase">Tap to reserve</p>
+        <p id="cal-month" class="text-base font-josefin font-bold text-ginza-black tracking-wide"></p>
+      </div>
+      <svg class="w-5 h-5 text-ginza-black/60 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+      </svg>
+    </div>
+
+    <div class="bg-ginza-black/60 px-4 pt-4 pb-2">
+      <div id="cal-grid" class="grid grid-cols-7 gap-x-1"></div>
+      <div class="flex items-center justify-center gap-5 mt-3 pt-3 border-t border-ginza-gold/10">
+        <div class="flex items-center gap-1.5">
+          <span class="text-[11px] text-ginza-gold leading-none">○</span>
+          <span class="text-[9px] text-ginza-ivory/40 font-josefin tracking-wider">Available</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-[10px] text-ginza-gold/50 leading-none">△</span>
+          <span class="text-[9px] text-ginza-ivory/40 font-josefin tracking-wider">Limited</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-ginza-gold/10 border-t border-ginza-gold/20 px-5 py-3 flex items-center justify-center gap-2">
+      <svg class="w-3.5 h-3.5 text-ginza-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+      </svg>
+      <span class="text-[11px] font-josefin tracking-widest text-ginza-gold uppercase">Check Availability & Reserve</span>
+    </div>
+  </div>
+
+  <p class="text-[10px] text-ginza-ivory/25 tracking-widest mb-4">* Reservation is confirmed after email from godaimeinfo@gmail.com.</p>
+
+  <button
+    onclick="openReserveModal('reservation_section')"
+    data-gtm-label="reservation_section"
+    class="w-full bg-ginza-gold text-ginza-black font-josefin font-bold py-4 rounded-lg tracking-widest text-sm hover:scale-105 transition-transform shadow-[0_0_24px_rgba(201,169,110,0.3)] flex items-center justify-center gap-2">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" stroke="#090909" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    RESERVE YOUR SEAT
+  </button>
+</div>
+</section>
+
+<script>
+(function() {
+  const days  = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  const today = new Date();
+  const grid  = document.getElementById('cal-grid');
+  const monthEl = document.getElementById('cal-month');
+  monthEl.textContent = months[today.getMonth()] + ' ' + today.getFullYear();
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    const dayName = days[d.getDay()];
+    const dateNum = d.getDate();
+    const isCircle = (dateNum * 13 + d.getMonth() * 7) % 10 >= 7;
+    const symbol   = isCircle ? '○' : '△';
+    const symColor = isCircle ? 'text-ginza-gold text-[11px]' : 'text-ginza-gold/50 text-[10px]';
+    const isToday = i === 0;
+    const cell = document.createElement('div');
+    cell.className = 'flex flex-col items-center gap-0.5 py-2';
+    cell.innerHTML = `
+      <span class="text-[9px] font-josefin tracking-wide ${isToday ? 'text-ginza-gold' : 'text-ginza-ivory/30'}">${dayName}</span>
+      <span class="text-[11px] ${isToday ? 'text-ginza-gold font-semibold' : 'text-ginza-ivory/50'}">${dateNum}</span>
+      <span class="${symColor} leading-none">${symbol}</span>
+    `;
+    grid.appendChild(cell);
+  }
+})();
+</script>
+
+<!-- ACCESS -->
+<section class="reveal py-20 px-6 bg-ginza-black" id="access">
+<div class="max-w-[390px] mx-auto">
+<div class="text-center mb-10">
+<p class="section-label mb-4">Access</p>
+<h3 class="font-cormorant italic text-3xl">Find Us</h3>
+</div>
+<div class="mb-8 flex items-start gap-4">
+<div class="mt-1 flex-shrink-0 w-8 h-8 flex items-center justify-center border border-ginza-gold/30 rounded-full">
+<svg class="w-3.5 h-3.5 text-ginza-gold" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+</svg>
+</div>
+<div>
+<p class="text-[10px] font-josefin tracking-[0.2em] text-ginza-gold uppercase mb-1">Address</p>
+<address class="not-italic text-sm text-ginza-ivory/70 font-light leading-relaxed">
+東京都新宿区新宿3-7-5 一兆ビル 2F<br/>
+Tokyo, Shinjuku-ku, Shinjuku 3-7-5<br/>Iccho Bldg. 2F<br/>
+<span class="text-ginza-ivory/40 text-[11px]">Open 11:00 — 23:00</span>
+</address>
+<a href="https://maps.app.goo.gl/MbPytsPEsMee3WeG8"
+   target="_blank" rel="noopener"
+   class="inline-flex items-center gap-1.5 mt-3 text-[10px] font-josefin tracking-widest text-ginza-gold uppercase border-b border-ginza-gold/30 pb-0.5 hover:border-ginza-gold transition-colors"
+   data-gtm-label="map_link">
+Open in Google Maps
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+</svg>
+</a>
+</div>
+</div>
+<div class="map-wrapper">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.9117174052094!2d139.70598719999998!3d35.6910264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d15e9f7526b%3A0x3182f34b1761d38c!2zVG9reW8gT21ha2FzZSBTdXNoaSBXYWd5dSAoSGFsYWwpIFNoaW5qdWt1IFJlc3RhdXJhbnQg5paw5a6_5a-_5Y-45ZKM54mb6aSQ5Y6F!5e1!3m2!1sja!2sjp!4v1775612822829!5m2!1sja!2sjp"
+allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="omakase 墨 Map">
+</iframe>
+</div>
+</div>
+</section>
+
+<!-- HALAL -->
+<section class="reveal py-20 px-8 bg-halal-green border-t border-ginza-gold/10">
+<div class="flex flex-col items-center text-center max-w-[390px] mx-auto">
+<div class="w-16 h-16 mb-6 text-ginza-gold opacity-80">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+</svg>
+</div>
+<p class="section-label mb-3">Halal Dining</p>
+<h2 class="font-cormorant italic text-3xl mb-6">A Halal-Friendly Dining Experience in Tokyo</h2>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/70 max-w-xs mb-4">
+Welcome to our restaurant — a warm, inclusive space where guests from all cultures can dine with peace of mind. We proudly serve Halal-certified, alcohol-free dishes, making us a trusted choice for Muslim travelers and families visiting Japan.
+</p>
+<p class="text-sm font-light leading-relaxed text-ginza-ivory/60 max-w-xs mb-8">
+To ensure comfort and convenience for our Muslim guests, we also provide a <span class="text-ginza-gold/80">prayer room on-site</span>.
+</p>
+<div class="flex flex-wrap items-center justify-center gap-3 text-xs font-josefin tracking-[0.15em] text-ginza-gold mb-8">
+<span class="px-3 py-1 border border-ginza-gold/30 rounded">NO PORK</span>
+<span class="px-3 py-1 border border-ginza-gold/30 rounded">NO ALCOHOL IN FOOD</span>
+<span class="px-3 py-1 border border-ginza-gold/30 rounded">PRAYER ROOM</span>
+</div>
+<div class="halal-cert-badge-wrap">
+<div class="flex flex-col items-center gap-3">
+<div class="halal-cert-badge">
+<svg class="w-7 h-7 text-ginza-gold" viewBox="0 0 32 32" fill="none">
+<path d="M16 4a12 12 0 1 0 0 24 9 9 0 1 1 0-18 12 12 0 0 0 0-6z" fill="currentColor" opacity="0.9"/>
+<polygon points="22,6 23.2,9.6 27,9.6 24,11.8 25.2,15.4 22,13.2 18.8,15.4 20,11.8 17,9.6 20.8,9.6" fill="currentColor" opacity="0.85"/>
+</svg>
+<span class="text-[8px] font-josefin tracking-wider text-ginza-gold uppercase leading-none">HALAL</span>
+</div>
+<p class="text-[9px] tracking-widest text-ginza-ivory/50 uppercase">Japan Halal<br/>Association</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="halal-cert-badge">
+<svg class="w-6 h-6 text-ginza-gold" viewBox="0 0 32 32" fill="none">
+<circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+<path d="M16 8a8 8 0 1 0 0 16A6 6 0 1 1 16 8z" fill="currentColor" opacity="0.8"/>
+<path d="M21 9l1 3h3l-2.5 1.8 1 3L21 15l-3.5 1.8 1-3L16 12h3z" fill="currentColor" opacity="0.9"/>
+</svg>
+<span class="text-[8px] font-josefin tracking-wider text-ginza-gold uppercase leading-none">CERTIFIED</span>
+</div>
+<p class="text-[9px] tracking-widest text-ginza-ivory/50 uppercase">Muslim<br/>Friendly</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="halal-cert-badge">
+<svg class="w-6 h-6 text-ginza-gold" viewBox="0 0 32 32" fill="none">
+<path d="M16 6 L16 18 M10 12 L16 6 L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="8" y="20" width="16" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+</svg>
+<span class="text-[8px] font-josefin tracking-wider text-ginza-gold uppercase leading-none">PRAYER</span>
+</div>
+<p class="text-[9px] tracking-widest text-ginza-ivory/50 uppercase">Prayer Room<br/>On-Site</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 px-8 bg-black/50 border-t border-white/5">
+<div class="text-center">
+<div class="mb-1 text-[9px] font-josefin tracking-[0.35em] text-ginza-gold/60 uppercase">omakase</div>
+<div class="font-cormorant italic text-3xl tracking-widest text-ginza-gold mb-8">墨</div>
+<address class="not-italic text-sm text-ginza-ivory/60 mb-8 font-light leading-relaxed">
+東京都新宿区新宿3-7-5 一兆ビル 2F<br/>
+Tokyo, Shinjuku-ku, Shinjuku 3-7-5<br/>Iccho Bldg. 2F<br/>
+Open 11:00 — 23:00
+</address>
+<div class="flex justify-center gap-6 mb-12">
+  <a class="text-ginza-gold hover:text-white transition-colors"
+     href="https://www.instagram.com/omakase_tokyo_wagyu?igsh=dzR6cmlvZzlueG93&utm_source=qr"
+     target="_blank" rel="noopener" aria-label="Instagram">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+  <button
+    class="text-ginza-gold hover:text-white transition-colors"
+    onclick="openReserveModal('footer')"
+    aria-label="Reserve"
+    data-gtm-label="footer">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+    </svg>
+  </button>
+  <a class="text-ginza-gold hover:text-white transition-colors"
+     href="https://maps.app.goo.gl/MbPytsPEsMee3WeG8"
+     target="_blank" rel="noopener"
+     aria-label="Google Maps"
+     data-gtm-label="footer_map">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+    </svg>
+  </a>
+</div>
+<p class="text-[9px] tracking-widest text-ginza-ivory/30 uppercase">© 2025 omakase 墨. All Rights Reserved.</p>
+</div>
+</footer>
+
+<!-- RESERVATION MODAL -->
+<div id="reserveModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);overflow-y:auto;-webkit-overflow-scrolling:touch;">
+  <div style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#111;border:1px solid rgba(201,169,110,0.3);border-radius:16px;width:100%;max-width:480px;padding:32px 24px;position:relative;box-sizing:border-box;">
+      <button onclick="closeReserveModal()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:rgba(240,237,228,0.5);font-size:24px;cursor:pointer;line-height:1;">&#x00D7;</button>
+      <p style="font-size:10px;letter-spacing:0.3em;color:rgba(201,169,110,0.6);text-transform:uppercase;margin:0 0 8px;">Reservation</p>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;color:#f0ede4;margin:0 0 4px;line-height:1.2;">Reservation Request</h3>
+      <p style="font-size:12px;color:rgba(201,169,110,0.7);margin:0 0 4px;letter-spacing:0.05em;">予約リクエスト</p>
+      <p style="font-size:12px;color:rgba(240,237,228,0.5);margin:0 0 24px;">We will send you a confirmation email.<br/>送信後、確認メールをお送りします。</p>
+
+      <div id="reserveForm">
+        <!-- Honeypot field: hidden from humans, bots will fill it -->
+        <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <label for="r_website">Website (do not fill)</label>
+          <input id="r_website" name="website" type="text" tabindex="-1" autocomplete="off"/>
+        </div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">お名前 / Name *</label><input id="r_name" type="text" placeholder="Yamada Taro" autocomplete="name" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;"/></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">メールアドレス / Email *</label><input id="r_email" type="email" placeholder="example@email.com" autocomplete="email" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;"/></div>
+        <div style="margin-bottom:16px;"><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">電話番号 / Phone *</label><input id="r_phone" type="tel" placeholder="+81 90-0000-0000" autocomplete="tel" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;"/></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">人数 / Guests *</label><select id="r_guests" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;"><option value="">-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option></select></div>
+          <div><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">希望時間 / Time *</label><select id="r_time" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;"><option value="">-</option><option>12:00</option><option>14:00</option><option>17:00</option><option>20:00</option></select></div>
+        </div>
+
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">希望日 / Preferred Date *</label>
+          <div style="position:relative;" onclick="document.getElementById('r_date').showPicker ? document.getElementById('r_date').showPicker() : document.getElementById('r_date').focus();">
+            <input id="r_date" type="date" style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:12px 40px 12px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;-webkit-appearance:none;cursor:pointer;" onclick="event.stopPropagation(); this.showPicker && this.showPicker();"/>
+            <svg style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#c9a96e;pointer-events:none;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/>
+            </svg>
+          </div>
+          <p style="font-size:10px;color:rgba(240,237,228,0.4);margin:4px 0 0;">📅 タップしてカレンダーから日付を選択 / Tap to pick from calendar</p>
+        </div>
+        <div style="margin-bottom:20px;"><label style="display:block;font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.7);text-transform:uppercase;margin-bottom:6px;">ご要望 / Special Requests</label><textarea id="r_message" rows="3" placeholder="Allergies, dietary requirements, special occasions..." style="width:100%;background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:8px;padding:10px 14px;color:#f0ede4;font-size:16px;box-sizing:border-box;resize:vertical;-webkit-appearance:none;"></textarea></div>
+
+        <div style="background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.2);border-radius:8px;padding:12px 14px;margin-bottom:20px;font-size:11px;color:rgba(240,237,228,0.5);line-height:1.7;">
+          <p style="margin:0 0 6px;color:rgba(201,169,110,0.7);font-weight:600;">キャンセルポリシー / Cancellation Policy</p>
+          <p style="margin:0 0 4px;">・24時間前以内：¥5,000 / person &nbsp;|&nbsp; Within 24 hours: ¥5,000 / person</p>
+          <p style="margin:0 0 10px;">・48時間前以内：¥2,500 / person &nbsp;|&nbsp; Within 48 hours: ¥2,500 / person</p>
+          <hr style="border:none;border-top:1px solid rgba(201,169,110,0.15);margin:8px 0;"/>
+          <p style="margin:0 0 10px;color:rgba(240,237,228,0.4);">※ このフォームでの送信は予約確定ではありません。godaimeinfo@gmail.com からの予約確定メールをお待ちください。<br/><br/>* This form does not confirm your reservation. Please wait for a confirmation email from godaimeinfo@gmail.com.</p>
+          <hr style="border:none;border-top:1px solid rgba(201,169,110,0.15);margin:8px 0;"/>
+          <p style="margin:0;color:rgba(201,169,110,0.75);font-weight:600;">※ 当日予約の場合、お席の確認が遅れることがございますので、<a href="tel:07035248272" style="color:#c9a96e;text-decoration:underline;">070-3524-8272</a> までお電話ください。<br/><br/><span style="color:rgba(240,237,228,0.5);font-weight:400;">* For same-day reservations, seat confirmation may be delayed. Please call <a href="tel:07035248272" style="color:#c9a96e;text-decoration:underline;">070-3524-8272</a>.</span></p>
+        </div>
+
+        <p id="r_error" style="color:#e57373;font-size:12px;margin-bottom:12px;display:none;"></p>
+        <button onclick="openConfirmDialog()" id="r_submit" style="width:100%;background:#c9a96e;color:#090909;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:14px;border:none;border-radius:8px;cursor:pointer;">SEND REQUEST / 送信する</button>
+      </div>
+
+      <div id="reserveSuccess" style="display:none;">
+        <div class="success-stage">
+          <!-- Gold foil shimmer background -->
+          <div class="gold-foil-bg"></div>
+          <!-- Floating gold particles -->
+          <span class="gold-particle" style="left:20%;top:70%;--dx:15px;animation-delay:0.2s;"></span>
+          <span class="gold-particle" style="left:35%;top:80%;--dx:-12px;animation-delay:0.6s;"></span>
+          <span class="gold-particle" style="left:55%;top:75%;--dx:18px;animation-delay:1.0s;"></span>
+          <span class="gold-particle" style="left:70%;top:82%;--dx:-10px;animation-delay:1.4s;"></span>
+          <span class="gold-particle" style="left:82%;top:68%;--dx:14px;animation-delay:0.8s;"></span>
+          <span class="gold-particle" style="left:15%;top:60%;--dx:-8px;animation-delay:1.8s;"></span>
+
+          <!-- Ink-brush "墨" character drawn with SVG animation -->
+          <svg class="sumi-brush-svg" id="sumiBrushSvg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top horizontal stroke -->
+            <path d="M 28 22 Q 50 18 72 22"/>
+            <!-- Upper box: left side -->
+            <path d="M 32 22 L 30 38"/>
+            <!-- Upper box: right side -->
+            <path d="M 68 22 L 70 38"/>
+            <!-- Upper box: bottom -->
+            <path d="M 30 38 L 70 38"/>
+            <!-- Middle horizontal -->
+            <path d="M 26 50 L 74 50"/>
+            <!-- Middle vertical -->
+            <path d="M 50 38 L 50 50"/>
+            <!-- Lower 土 top -->
+            <path d="M 38 62 L 62 62"/>
+            <!-- Lower 土 vertical -->
+            <path d="M 50 62 L 50 82"/>
+            <!-- Lower 土 bottom (wider) -->
+            <path d="M 26 82 L 74 82"/>
+          </svg>
+
+          <h4 class="success-title" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#c9a96e;margin:0 0 8px;letter-spacing:0.05em;">Request Received</h4>
+          <p class="success-title" style="font-family:'Noto Serif JP',serif;font-size:12px;color:rgba(201,169,110,0.7);margin:0 0 20px;letter-spacing:0.15em;">ご予約リクエストを承りました</p>
+
+          <div class="success-body" style="max-width:300px;margin:0 auto;padding:16px 20px;background:rgba(201,169,110,0.05);border:1px solid rgba(201,169,110,0.2);border-radius:12px;">
+            <p style="font-size:13px;color:rgba(240,237,228,0.8);margin:0 0 10px;line-height:1.7;">
+              godaimeinfo@gmail.com からの<br/>確定メールをお待ちください。
+            </p>
+            <div style="height:1px;background:rgba(201,169,110,0.2);margin:10px 0;"></div>
+            <p style="font-size:12px;color:rgba(240,237,228,0.55);margin:0;line-height:1.6;">
+              Please wait for a confirmation<br/>from godaimeinfo@gmail.com.
+            </p>
+          </div>
+
+          <button onclick="closeReserveModal()" class="success-close" style="margin-top:28px;background:transparent;border:1px solid rgba(201,169,110,0.5);color:#c9a96e;font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:0.2em;padding:11px 32px;border-radius:8px;cursor:pointer;transition:all 0.3s;" onmouseover="this.style.background='rgba(201,169,110,0.1)';this.style.borderColor='#c9a96e';" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(201,169,110,0.5)';">CLOSE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- CONFIRMATION DIALOG (overlay on top of reservation modal) -->
+<div id="confirmDialog" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,0.75);overflow-y:auto;-webkit-overflow-scrolling:touch;">
+  <div style="min-height:100%;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+    <div style="background:#0f0f0f;border:1.5px solid rgba(201,169,110,0.5);border-radius:16px;width:100%;max-width:440px;padding:28px 24px;position:relative;box-sizing:border-box;box-shadow:0 0 40px rgba(201,169,110,0.15);">
+      <button onclick="closeConfirmDialog()" style="position:absolute;top:14px;right:14px;background:none;border:none;color:rgba(240,237,228,0.5);font-size:22px;cursor:pointer;line-height:1;">&#x00D7;</button>
+
+      <p style="font-size:10px;letter-spacing:0.3em;color:rgba(201,169,110,0.6);text-transform:uppercase;margin:0 0 8px;">Final Check</p>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#c9a96e;margin:0 0 4px;line-height:1.2;">Please Confirm Your Reservation</h3>
+      <p style="font-size:12px;color:rgba(201,169,110,0.7);margin:0 0 16px;letter-spacing:0.05em;">ご予約内容のご確認</p>
+
+      <div style="background:rgba(201,169,110,0.08);border-left:3px solid #c9a96e;padding:10px 14px;margin-bottom:18px;border-radius:0 6px 6px 0;">
+        <p style="font-size:12px;color:rgba(240,237,228,0.8);margin:0 0 4px;line-height:1.6;">
+          食材とお席の準備がございますので、内容に誤りがないかご確認ください。
+        </p>
+        <p style="font-size:11px;color:rgba(240,237,228,0.5);margin:0;line-height:1.6;">
+          We prepare ingredients and seating based on your reservation. Please confirm details are correct.
+        </p>
+      </div>
+
+      <div style="background:#1a1a1a;border:1px solid rgba(201,169,110,0.25);border-radius:12px;padding:16px 18px;margin-bottom:18px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,169,110,0.1);">
+          <span style="font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.6);text-transform:uppercase;">Date / 日付</span>
+          <span id="confirm_date" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#c9a96e;font-weight:600;">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(201,169,110,0.1);">
+          <span style="font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.6);text-transform:uppercase;">Time / 時間</span>
+          <span id="confirm_time" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#c9a96e;font-weight:600;">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;">
+          <span style="font-size:10px;letter-spacing:0.15em;color:rgba(201,169,110,0.6);text-transform:uppercase;">Guests / 人数</span>
+          <span id="confirm_guests" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:#c9a96e;font-weight:600;">—</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:10px 0;">
+          <input id="confirm_check_details" type="checkbox" class="confirm-checkbox"/>
+          <span style="font-size:12px;color:rgba(240,237,228,0.75);line-height:1.5;">
+            <strong style="color:rgba(201,169,110,0.9);font-weight:600;">日付・時間・人数を確認しました</strong><br/>
+            <span style="color:rgba(240,237,228,0.55);font-size:11px;">I have confirmed the date, time and number of guests are correct.</span>
+          </span>
+        </label>
+        <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:10px 0;border-top:1px solid rgba(201,169,110,0.1);">
+          <input id="confirm_check_policy" type="checkbox" class="confirm-checkbox"/>
+          <span style="font-size:12px;color:rgba(240,237,228,0.75);line-height:1.5;">
+            <strong style="color:rgba(201,169,110,0.9);font-weight:600;">キャンセルポリシーを確認しました</strong><br/>
+            <span style="color:rgba(240,237,228,0.55);font-size:11px;">I have read and agree to the cancellation policy.</span>
+          </span>
+        </label>
+      </div>
+
+      <p id="confirm_error" style="color:#e57373;font-size:11px;margin:0 0 12px;display:none;">両方にチェックを入れてください / Please check both boxes.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:10px;">
+        <button onclick="closeConfirmDialog()" style="background:transparent;border:1px solid rgba(201,169,110,0.4);color:rgba(201,169,110,0.9);font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:13px 10px;border-radius:8px;cursor:pointer;">修正する<br/><span style="font-size:9px;opacity:0.7;">EDIT</span></button>
+        <button onclick="confirmAndSubmit()" id="confirm_submit_btn" style="background:#c9a96e;color:#090909;font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;padding:13px 10px;border:none;border-radius:8px;cursor:pointer;">この内容で送信<br/><span style="font-size:9px;opacity:0.75;">CONFIRM &amp; SEND</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const observer = new IntersectionObserver((e) => {
+    e.forEach(el => { if (el.isIntersecting) el.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  emailjs.init('6I-wkxv05ZwY-PpXa');
+
+  function openReserveModal(label) {
+    document.getElementById('reserveModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    window._reserveModalOpenedAt = Date.now();  // タイマー用: モーダル表示時刻を記録
+
+    // 日付入力の最小値を今日に設定（過去日付選択を防止）
+    var today = new Date();
+    var minDate = today.getFullYear() + '-' +
+                  String(today.getMonth()+1).padStart(2,'0') + '-' +
+                  String(today.getDate()).padStart(2,'0');
+    document.getElementById('r_date').setAttribute('min', minDate);
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'reserve_modal_open',
+      reserve_button_location: label
+    });
+  }
+
+  function closeReserveModal() {
+    document.getElementById('reserveModal').style.display = 'none';
+    document.getElementById('confirmDialog').style.display = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('reserveForm').style.display = 'block';
+    document.getElementById('reserveSuccess').style.display = 'none';
+    var brushReset = document.getElementById('sumiBrushSvg');
+    if (brushReset) brushReset.classList.remove('drawing');
+    ['r_name','r_email','r_phone','r_guests','r_time','r_date','r_message','r_website'].forEach(function(id){
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('confirm_check_details').checked = false;
+    document.getElementById('confirm_check_policy').checked = false;
+    const err = document.getElementById('r_error');
+    err.style.display = 'none';
+    err.textContent = '';
+    const btn = document.getElementById('r_submit');
+    btn.textContent = 'SEND REQUEST / 送信する';
+    btn.disabled = false;
+  }
+
+  // ============ 確認ダイアログを開く（必須チェック + bot対策後） ============
+  function openConfirmDialog() {
+    var name    = document.getElementById('r_name').value.trim();
+    var email   = document.getElementById('r_email').value.trim();
+    var phone   = document.getElementById('r_phone').value.trim();
+    var guests  = document.getElementById('r_guests').value;
+    var time    = document.getElementById('r_time').value;
+    var date    = document.getElementById('r_date').value;
+    var website = document.getElementById('r_website').value.trim();
+    var errEl   = document.getElementById('r_error');
+
+    // Bot対策 1: Honeypot
+    if (website !== '') {
+      document.getElementById('reserveForm').style.display = 'none';
+      document.getElementById('reserveSuccess').style.display = 'block';
+      var brushSvg1 = document.getElementById('sumiBrushSvg');
+      if (brushSvg1) { brushSvg1.classList.remove('drawing'); void brushSvg1.offsetWidth; brushSvg1.classList.add('drawing'); }
+      return;
+    }
+
+    // Bot対策 2: 送信時間チェック
+    var openedAt = window._reserveModalOpenedAt || 0;
+    var elapsed = Date.now() - openedAt;
+    if (elapsed < 3000) {
+      document.getElementById('reserveForm').style.display = 'none';
+      document.getElementById('reserveSuccess').style.display = 'block';
+      var brushSvg2 = document.getElementById('sumiBrushSvg');
+      if (brushSvg2) { brushSvg2.classList.remove('drawing'); void brushSvg2.offsetWidth; brushSvg2.classList.add('drawing'); }
+      return;
+    }
+
+    // 必須チェック
+    if (!name || !email || !phone || !guests || !time || !date) {
+      errEl.textContent = '* 必須項目を入力してください / Please fill in required fields.';
+      errEl.style.display = 'block';
+      return;
+    }
+    errEl.style.display = 'none';
+
+    // 確認ダイアログに予約内容を表示
+    var dateObj = new Date(date);
+    var weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    var formattedDate = dateObj.getFullYear() + '/' +
+                        String(dateObj.getMonth()+1).padStart(2,'0') + '/' +
+                        String(dateObj.getDate()).padStart(2,'0') +
+                        ' (' + weekdays[dateObj.getDay()] + ')';
+
+    document.getElementById('confirm_date').textContent = formattedDate;
+    document.getElementById('confirm_time').textContent = time;
+    document.getElementById('confirm_guests').textContent = guests + (guests === '1' ? ' guest' : ' guests');
+
+    document.getElementById('confirm_check_details').checked = false;
+    document.getElementById('confirm_check_policy').checked = false;
+    document.getElementById('confirm_error').style.display = 'none';
+
+    document.getElementById('confirmDialog').style.display = 'block';
+  }
+
+  function closeConfirmDialog() {
+    document.getElementById('confirmDialog').style.display = 'none';
+  }
+
+  // ============ 確認後に送信 ============
+  async function confirmAndSubmit() {
+    var checkDetails = document.getElementById('confirm_check_details').checked;
+    var checkPolicy  = document.getElementById('confirm_check_policy').checked;
+    var errEl = document.getElementById('confirm_error');
+
+    if (!checkDetails || !checkPolicy) {
+      errEl.textContent = '両方にチェックを入れてください / Please check both boxes.';
+      errEl.style.display = 'block';
+      return;
+    }
+    errEl.style.display = 'none';
+
+    var btn = document.getElementById('confirm_submit_btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    var name    = document.getElementById('r_name').value.trim();
+    var email   = document.getElementById('r_email').value.trim();
+    var phone   = document.getElementById('r_phone').value.trim();
+    var guests  = document.getElementById('r_guests').value;
+    var time    = document.getElementById('r_time').value;
+    var date    = document.getElementById('r_date').value;
+    var message = document.getElementById('r_message').value.trim();
+
+    var source = window.location.pathname;
+    var params = { name, email, phone, guests, time, date, message, source_path: source, location: '新宿三丁目店', location_key: 'shinjuku', address_jp: '東京都新宿区新宿3-7-5 一兆ビル 2F', address_en: 'Tokyo, Shinjuku-ku, Shinjuku 3-7-5, Iccho Bldg. 2F' };
+
+    try {
+      await emailjs.send('service_41qov79', 'template_uk1m5wn', params);
+      await emailjs.send('service_41qov79', 'template_f9w6hmy', params);
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'reservation_form_submit',
+        form_guests: guests,
+        form_date: date,
+        source_path: source
+      });
+
+      document.getElementById('confirmDialog').style.display = 'none';
+      document.getElementById('reserveForm').style.display = 'none';
+      document.getElementById('reserveSuccess').style.display = 'block';
+      // Trigger ink-brush drawing animation (新宿店のみ)
+      var brushSvg = document.getElementById('sumiBrushSvg');
+      if (brushSvg) {
+        brushSvg.classList.remove('drawing');
+        void brushSvg.offsetWidth;
+        brushSvg.classList.add('drawing');
+      }
+    } catch (err) {
+      errEl.textContent = 'エラーが発生しました。再度お試しください。/ An error occurred. Please try again.';
+      errEl.style.display = 'block';
+      btn.innerHTML = 'この内容で送信<br/><span style="font-size:9px;opacity:0.75;">CONFIRM &amp; SEND</span>';
+      btn.disabled = false;
+    }
+  }
+
+  async function submitReservation() {
+    // 互換性のため残しているが、実際には openConfirmDialog → confirmAndSubmit の流れに置き換え済み
+    openConfirmDialog();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var m = document.getElementById('reserveModal');
+    if (m) {
+      m.addEventListener('click', function(e) {
+        if (e.target === this) closeReserveModal();
+      });
+    }
+    // 確認ダイアログの背景クリックで閉じる
+    var cd = document.getElementById('confirmDialog');
+    if (cd) {
+      cd.addEventListener('click', function(e) {
+        if (e.target === this) closeConfirmDialog();
+      });
+    }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('active'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  });
+</script>
+
+</body>
+</html>
