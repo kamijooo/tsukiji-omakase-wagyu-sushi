@@ -1,0 +1,26 @@
+name: Sync index.html to subdirectories
+
+on:
+  push:
+    paths:
+      - 'index.html'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy index.html to subdirectories
+        run: |
+          cp index.html japan/index.html
+          cp index.html global/index.html
+          cp index.html map/index.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add japan/index.html global/index.html map/index.html
+          git diff --cached --quiet || git commit -m "Auto-sync index.html to /japan /global /map"
+          git push
