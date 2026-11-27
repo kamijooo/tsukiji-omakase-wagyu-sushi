@@ -393,7 +393,7 @@ Ultra-rare lean Wagyu. Halal certified.<br/>A dining experience crafted for the 
 
   <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
     <svg class="w-4 h-4 text-ginza-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
-    <span class="text-[10px] font-josefin tracking-widest uppercase">Halal Certified · Alcohol Free</span>
+    <span class="text-[10px] font-josefin tracking-widest uppercase">Halal Certified<template data-hidden="alcohol"> · Alcohol Free</template></span>
   </div>
 </div>
 </div>
@@ -415,6 +415,7 @@ slides[current].style.opacity = '1';
 <section class="py-8 bg-ginza-black">
 <div class="flex flex-wrap justify-center gap-4 px-4">
 
+<template data-hidden="tripadvisor">
 <div class="trip-card w-full max-w-[340px] border border-ginza-gold/30 rounded-lg bg-ginza-gold/5 text-center flex flex-col items-center gap-0 overflow-hidden">
 <img src="images/trippage.jpg" alt="Tripadvisor Ranking" class="w-1/2 h-auto mx-auto mt-3 rounded opacity-90"/>
 <div class="flex flex-col items-center gap-1.5 p-3 border-t border-ginza-gold/10 w-full mt-2">
@@ -427,6 +428,7 @@ It ranked No.1 on Tripadvisor's Tokyo ranking from August 2025 to March 2026.
 </p>
 </div>
 </div>
+</template>
 
 <div class="w-40 border border-ginza-gold/30 p-4 rounded-lg bg-ginza-gold/5 text-center flex flex-col items-center gap-2">
 <svg class="w-8 h-8" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -448,7 +450,7 @@ It ranked No.1 on Tripadvisor's Tokyo ranking from August 2025 to March 2026.
 </svg>
 <p class="text-[10px] uppercase tracking-widest text-ginza-gold">Halal Certified</p>
 <p class="font-cormorant text-lg italic leading-tight">Japan Muslim<br/>Association</p>
-<p class="text-[9px] text-ginza-ivory/50 leading-relaxed">Certified Halal. No pork, no alcohol. Prayer room on-site.</p>
+<p class="text-[9px] text-ginza-ivory/50 leading-relaxed">Certified Halal. No pork<template data-hidden="alcohol">, no alcohol</template>. Prayer room on-site.</p>
 </div>
 
 </div>
@@ -483,6 +485,7 @@ From the delicate assembly of Edomae-style sushi to the dramatic carving of A5 W
 </div>
 </section>
 
+<template data-hidden="1962">
 <!-- OUR STORY -->
 <section class="reveal py-20 bg-ginza-black border-t border-ginza-gold/10" id="story">
 <div class="max-w-3xl mx-auto px-8">
@@ -530,6 +533,7 @@ I personally select Wagyu processed at halal-certified slaughterhouses in Japan.
 </div>
 </div>
 </section>
+</template>
 
 <div class="relative h-48 overflow-hidden">
 <img src="images/hero.jpg" alt="" class="w-full h-full object-cover object-center"/>
@@ -561,7 +565,9 @@ I personally select Wagyu processed at halal-certified slaughterhouses in Japan.
 <div class="rounded-xl p-4 text-center" style="background:linear-gradient(135deg,rgba(201,169,110,0.15) 0%,rgba(201,169,110,0.05) 100%); border:1px solid rgba(201,169,110,0.35);">
 <p class="font-cormorant italic text-2xl text-ginza-gold mb-1">100%</p>
 <p class="text-[10px] tracking-widest uppercase text-ginza-ivory/60">Halal certified</p>
+<template data-hidden="alcohol">
 <p class="text-[10px] text-ginza-ivory/40 mt-1">Alcohol-free menu</p>
+</template>
 </div>
 </div>
 
@@ -706,6 +712,7 @@ window.addEventListener('load', function() {
   <!-- Review scroll container -->
   <div class="review-scroll" id="reviewScroll">
 
+    <template data-hidden="tripadvisor">
     <!-- Review 1: English / UAE -->
     <div class="review-card">
       <div class="flex items-center gap-1 mb-3">
@@ -723,6 +730,7 @@ window.addEventListener('load', function() {
         </div>
       </div>
     </div>
+    </template>
 
     <!-- Review 2: English / US -->
     <div class="review-card">
@@ -760,6 +768,7 @@ window.addEventListener('load', function() {
       </div>
     </div>
 
+    <template data-hidden="tripadvisor">
     <!-- Review 4: Chinese (Traditional) -->
     <div class="review-card">
       <div class="flex items-center gap-1 mb-3">
@@ -777,6 +786,7 @@ window.addEventListener('load', function() {
         </div>
       </div>
     </div>
+    </template>
 
     <!-- Review 5: English / Malaysia -->
     <div class="review-card">
@@ -807,11 +817,13 @@ window.addEventListener('load', function() {
       <p class="text-ginza-gold text-sm mb-1">★★★★★</p>
       <p class="text-[9px] text-ginza-ivory/40 font-josefin tracking-widest uppercase">Google · 500+ reviews</p>
     </div>
-    <div class="w-px h-12 bg-ginza-gold/20"></div>
+    <template data-hidden="tripadvisor"><div class="w-px h-12 bg-ginza-gold/20"></div></template>
+    <template data-hidden="tripadvisor">
     <div class="text-center">
       <p class="font-cormorant italic text-3xl text-ginza-gold leading-none mb-1">No.1</p>
       <p class="text-[9px] text-ginza-ivory/40 font-josefin tracking-widest uppercase mt-2">Tripadvisor Tokyo<br/>Aug 2025 — Mar 2026 (flagship)</p>
     </div>
+    </template>
   </div>
 </div>
 </section>
@@ -965,14 +977,16 @@ allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ti
 <p class="section-label mb-3">Halal Dining</p>
 <h2 class="font-cormorant italic text-3xl mb-6">A Halal-Friendly Dining Experience in Tsukiji</h2>
 <p class="text-sm font-light leading-relaxed text-ginza-ivory/70 max-w-xs mb-4">
-Welcome to our restaurant — a warm, inclusive space where guests from all cultures can dine with peace of mind. We proudly serve Halal-certified, alcohol-free dishes, making us a trusted choice for Muslim travelers and families visiting Japan.
+Welcome to our restaurant — a warm, inclusive space where guests from all cultures can dine with peace of mind. We proudly serve Halal-certified<template data-hidden="alcohol">, alcohol-free</template> dishes, making us a trusted choice for Muslim travelers and families visiting Japan.
 </p>
 <p class="text-sm font-light leading-relaxed text-ginza-ivory/60 max-w-xs mb-8">
 To ensure comfort and convenience for our Muslim guests, we also provide a <span class="text-ginza-gold/80">prayer room on-site</span>.
 </p>
 <div class="flex flex-wrap items-center justify-center gap-3 text-xs font-josefin tracking-[0.15em] text-ginza-gold mb-8">
 <span class="px-3 py-1 border border-ginza-gold/30 rounded">NO PORK</span>
+<template data-hidden="alcohol">
 <span class="px-3 py-1 border border-ginza-gold/30 rounded">NO ALCOHOL IN FOOD</span>
+</template>
 <span class="px-3 py-1 border border-ginza-gold/30 rounded">PRAYER ROOM</span>
 </div>
 <div class="halal-cert-badge-wrap">
